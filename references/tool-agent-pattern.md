@@ -199,8 +199,18 @@ agent = graph.compile()
 result = agent.invoke({
     "messages": [HumanMessage(content="What is 3 + 4 multiplied by 2?")]
 })
-print(result["messages"][-1].content)  # "14"
+print(result["messages"][-1].content)
 ```
+
+**Expected Output:**
+```
+14
+```
+
+The agent processes the request as follows:
+1. LLM receives the question and generates tool calls for `add(3, 4)` then `multiply(7, 2)`
+2. Tool node executes each tool call and returns ToolMessage results
+3. LLM synthesizes final answer from tool outputs
 
 ---
 

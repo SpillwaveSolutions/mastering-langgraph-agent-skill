@@ -1,6 +1,14 @@
 ---
-name: mastering-langgraph
-description: Build stateful AI agents and agentic workflows with LangGraph in Python. Covers tool-using agents with LLM-tool loops, branching workflows, conversation memory, human-in-the-loop oversight, and production monitoring. Use when: (1) building agents that use tools and loop until task complete, (2) creating multi-step workflows with conditional branches, (3) adding persistence/memory across turns with checkpointers, (4) implementing human approval with interrupt(), (5) debugging via time-travel or LangSmith. Covers StateGraph, nodes, edges, add_conditional_edges, MessagesState, thread_id, Command objects, and ToolMessage handling. Examples include chatbots, calculator agents, and structured workflows.
+name: mastering-langgraph-agent-skill
+description: >
+  Build stateful AI agents and agentic workflows with LangGraph in Python.
+  Use when asked to "build a LangGraph agent", "create a stateful workflow",
+  "add persistence to an agent", "implement human-in-the-loop approval",
+  "debug a LangGraph application", or "create a multi-agent system".
+  Covers tool-using agents with LLM-tool loops, branching workflows,
+  conversation memory, HITL oversight, and production monitoring.
+  Includes StateGraph, nodes, edges, add_conditional_edges, MessagesState,
+  thread_id, Command objects, and ToolMessage handling patterns.
 license: MIT
 metadata:
   version: 1.0.0
@@ -11,6 +19,18 @@ metadata:
 # LangGraph Development Guide
 
 Build stateful AI agents and workflows by defining graphs of nodes (steps) connected by edges (transitions).
+
+## Contents
+
+- [Quick Start](#quick-start)
+- [Common Build Scenarios](#common-build-scenarios)
+- [Core Principles](#core-principles)
+- [Development Workflow](#development-workflow)
+- [Common Pitfalls](#common-pitfalls)
+- [Environment Setup](#environment-setup)
+- [Quick Verification](#quick-verification)
+- [API Essentials](#api-essentials)
+- [Next Steps](#next-steps)
 
 ## Quick Start
 
@@ -57,7 +77,7 @@ Key patterns:
 - `InMemorySaver()` — enables memory across invocations
 - `thread_id` — identifies conversation for persistence
 
-## What Are You Building?
+## Common Build Scenarios
 
 ### Simple Chatbot / Q&A
 The Quick Start above covers this. Add more nodes for preprocessing or postprocessing as needed.
