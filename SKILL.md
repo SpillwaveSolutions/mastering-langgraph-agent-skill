@@ -12,6 +12,18 @@ metadata:
 
 Build stateful AI agents and workflows by defining graphs of nodes (steps) connected by edges (transitions).
 
+## Contents
+
+- [Quick Start](#quick-start)
+- [Common Build Scenarios](#common-build-scenarios)
+- [Core Principles](#core-principles)
+- [Development Workflow](#development-workflow)
+- [Common Pitfalls](#common-pitfalls)
+- [Environment Setup](#environment-setup)
+- [Quick Verification](#quick-verification)
+- [API Essentials](#api-essentials)
+- [Next Steps](#next-steps)
+
 ## Quick Start
 
 Minimal chatbot with memory:
@@ -57,7 +69,7 @@ Key patterns:
 - `InMemorySaver()` — enables memory across invocations
 - `thread_id` — identifies conversation for persistence
 
-## What Are You Building?
+## Common Build Scenarios
 
 ### Simple Chatbot / Q&A
 The Quick Start above covers this. Add more nodes for preprocessing or postprocessing as needed.
